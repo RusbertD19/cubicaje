@@ -1,0 +1,33 @@
+<div class="app-container">
+  <!-- Barra superior -->
+  <div class="navbar navbar-dark fixed-top" style="background: #9c9c9c; width: 100%; height: 60px;">
+    <div class="navbar-content d-flex justify-content-between align-items-center">
+      <div class="navbar-left d-flex align-items-center">
+        <!--
+        <button class="hamburger-btn" (click)="menuOpciones.abrirMenu()">
+          <i class="fas fa-bars" style="color: white;"></i>
+        </button>
+-->
+        <!-- Menú -->
+        <app-menu-opciones #menuOpciones [roles]="roles"></app-menu-opciones>
+
+        <!-- Logo -->
+        <div class="logo-container">
+          <a href="/inicio">
+          <!-- <img src="assets/img/logo (2).png" alt="Concreservicios" style="width: 180px; height: 120px; margin-top: -20px;"> --> 
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Backdrop global -->
+<div class="global-backdrop" *ngIf="menuOpciones?.isOpen" (click)="menuOpciones.cerrarMenu()"></div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <b>© 2025 Copyright</b>
+  </div>
+</footer>
