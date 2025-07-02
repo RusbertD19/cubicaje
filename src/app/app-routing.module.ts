@@ -5,7 +5,7 @@ import { MostrarCubicajeComponent } from './pagina/mostrar-cubicaje/mostrar-cubi
 
 
 const routes: Routes = [
-    { path: '/mostrar-cubicaje', component: MostrarCubicajeComponent},
+    { path: 'mostrar-cubicaje', component: MostrarCubicajeComponent},
     { path: "**", pathMatch: "full", redirectTo: "" }
 ];
 
