@@ -11,7 +11,7 @@ import { TokenService } from '../servicios/token.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  title = "SteelSoft";
+  title = "Cubicaje";
   isLogged = false;
   roles: string[] = [];
   email: string = "";

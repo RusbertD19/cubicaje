@@ -47,4 +47,8 @@ seleccionarSeccionManual(seccion: string) {
   this.seleccionarSeccion({ target: { value: seccion } });
   this.cerrarMenu();
 }
+navegarACubicaje() {
+  this.cerrarMenu();
+  this.router.navigate(['/mostrar-cubicaje']);
+}
 }

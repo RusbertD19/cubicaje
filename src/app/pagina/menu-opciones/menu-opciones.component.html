@@ -10,48 +10,10 @@
   </div>
 
   <div class="menu-items">
-    <button class="menu-item" *ngIf="roles.includes('admin')" (click)="cambiarSeccion('usuarios'); cerrarMenu()">
-      <i class="fa-solid fa-users"></i> Users
-    </button>
-    <button class="menu-item" *ngIf="!(roles.includes('digitador') || roles.includes('cliente'))"
-      (click)="cambiarSeccion('empresas'); cerrarMenu()">
-      <i class="fa-solid fa-building" style="margin-right: 3px;"></i> Companies
-    </button>
-    <button class="menu-item"
-      *ngIf="!(roles.includes('digitador') || roles.includes('cliente')) || roles.includes('ingeniero')"
-      (click)="cambiarSeccion('obra'); cerrarMenu()">
-      <i class="fa-solid fa-helmet-safety"></i> Works
-    </button>
+   <button class="menu-item" (click)="navegarACubicaje()">
+  <i class="fa-solid fa-building"></i> Cubicaje
+</button>
 
-
-    <div class="menu-group">
-      <div class="group-title" (click)="toggleSubMenu('ensayos')">
-        <i class="fa-solid fa-flask-vial"></i> Tests
-        <i class="fa-solid" [ngClass]="subMenu === 'ensayos' ? 'fa-chevron-up' : 'fa-chevron-down'"
-          style="margin-left:auto;"></i>
-      </div>
-      <div class="sub-menu" *ngIf="subMenu === 'ensayos'">
-        <button class="sub-menu-item" (click)="seleccionarSeccionManual('ensayos')">
-          <i class="fa-solid fa-cubes"></i> Concretes
-        </button>
-        <button class="sub-menu-item" (click)="seleccionarSeccionManual('vigas')">
-          <i class="fa-solid fa-screwdriver-wrench"></i> Beams
-        </button>
-        <button class="sub-menu-item" (click)="seleccionarSeccionManual('suelos')">
-          <i class="fa-solid fa-mountain"></i> Soils
-        </button>
-        <button class="sub-menu-item" (click)="seleccionarSeccionManual('aceros')">
-          <i class="fa-solid fa-ruler-combined"></i> Steels
-        </button>
-      </div>
-    </div>
-    <button class="menu-item" *ngIf="!(roles.includes('digitador') || roles.includes('cliente'))"
-      (click)="cambiarSeccion('sedes'); cerrarMenu()">
-      <i class="fa-solid fa-landmark" style="margin-right: 3px;"></i> Sites
-    </button>
-    <button class="menu-item" (click)="logout()">
-      <i class="fa-solid fa-right-from-bracket" style="margin-right: 3px;"></i> Exit
-    </button>
   </div>
 
 </div>
