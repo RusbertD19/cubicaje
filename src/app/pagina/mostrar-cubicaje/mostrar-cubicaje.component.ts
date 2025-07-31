@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./mostrar-cubicaje.component.css']
 })
 export class MostrarCubicajeComponent {
+showModal: boolean = false;
 
+ abrirModal(): void {
+    this.showModal = true;
+  }
+
+  cerrarModal(): void {
+    this.showModal = false;
+  }
 }

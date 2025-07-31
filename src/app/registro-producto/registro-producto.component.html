@@ -1,0 +1,73 @@
+<div class="modal-content vigas-modal">
+  <div class="modal-header">
+    <h5 class="modal-title">Información Detallada de Cubicajes</h5>
+    <button type="button" class="close" (click)="cerrarModal()" aria-label="Close">&times;</button>
+  </div>
+
+  <div class="modal-body">
+    <div class="accordion" id="accordionVigas">
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" (click)="toggleAccordion()"
+          [ngClass]="{'collapsed': !isAccordionOpen, 'open': isAccordionOpen}">
+          Información inicial de producto
+        </button>
+
+        <div [ngClass]="{'collapse show': isAccordionOpen, 'collapse': !isAccordionOpen}">
+          <div class="accordion-body">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control input-sm" name="cr">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Peso</label>
+                    <input type="text" class="form-control input-sm" name="numeroMuestra">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label">Descripción del producto</label>
+                    <input type="text" class="form-control input-sm" name="fechaToma">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Lt</label>
+                    <input type="number" class="form-control input-sm" name="resistencia">
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-end mt-3">
+                <button type="button" class="btn btn-primary guardar-btn">
+                  Guardar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+   <!-- Acordeón 1: Caja -->
+      <div class="accordion-item">
+        <button class="accordion-button" type="button" (click)="toggleAccordionCaja()"
+          [ngClass]="{'collapsed': !isAccordionCajaOpen, 'open': isAccordionCajaOpen}">
+          Información inicial de caja
+        </button>
+
+        <div [ngClass]="{'collapse show': isAccordionCajaOpen, 'collapse': !isAccordionCajaOpen}">
+          <div class="accordion-body">
+            <app-registro-caja></app-registro-caja> <!-- aquí se inyecta como parte del modal padre -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary cerrar-btn" (click)="cerrarModal()">
+      Cerrar
+    </button>
+  </div>
+</div>

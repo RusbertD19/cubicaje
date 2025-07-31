@@ -23,6 +23,8 @@ import { UsuarioInterceptor } from './pagina/guards/interceptor/usuario.intercep
 import { MenuOpcionesComponent } from './pagina/menu-opciones/menu-opciones.component';
 import { MostrarCubicajeComponent } from './pagina/mostrar-cubicaje/mostrar-cubicaje.component';
 import { TableComponent } from './pagina/table/table.component';
+import { RegistroProductoComponent } from './registro-producto/registro-producto.component';
+import { RegistroCajaComponent } from './registro-caja/registro-caja.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,7 +36,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     MenuOpcionesComponent,
     TableComponent,
-    MostrarCubicajeComponent
+    MostrarCubicajeComponent,
+    RegistroProductoComponent,
+    RegistroCajaComponent
   
   ],
   imports: [
