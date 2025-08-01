@@ -1,38 +1,38 @@
-<form>
+<form #cajaForm="ngForm">
   <div class="row">
     <div class="col-md-6">
       <div class="mb-3">
         <label class="form-label">Unidades</label>
-        <input type="text" class="form-control input-sm" name="cr">
+        <input type="number" class="form-control input-sm" name="unidades" ngModel>
       </div>
       <div class="mb-3">
         <label class="form-label">Peso Total</label>
-        <input type="text" class="form-control input-sm" name="numeroMuestra">
+        <input type="number" class="form-control input-sm" name="pesoTotal" ngModel>
       </div>
       <div class="mb-3">
         <label class="form-label">Cajas por tendido</label>
-        <input type="number" class="form-control input-sm" name="resistencia">
+        <input type="number" class="form-control input-sm" name="cajasxtendido" ngModel>
       </div>
     </div>
 
     <div class="col-md-6">
       <div class="mb-3">
         <label class="form-label">Largo</label>
-        <input type="text" class="form-control input-sm" name="fechaToma">
+        <input type="number" class="form-control input-sm" name="largo" ngModel>
       </div>
       <div class="mb-3">
         <label class="form-label">Ancho</label>
-        <input type="number" class="form-control input-sm" name="resistencia">
+        <input type="number" class="form-control input-sm" name="ancho" ngModel>
       </div>
       <div class="mb-3">
         <label class="form-label">Tendidos permisibles</label>
-        <input type="number" class="form-control input-sm" name="resistencia">
+        <input type="number" class="form-control input-sm" name="tendidosPermisibles" ngModel>
       </div>
     </div>
   </div>
 
   <div class="d-flex justify-content-end mt-3">
-    <button type="button" class="btn btn-primary guardar-btn">
+    <button type="button" class="btn btn-primary guardar-btn" (click)="agregarCaja(cajaForm)">
       Guardar
     </button>
   </div>
